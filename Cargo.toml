@@ -16,3 +16,6 @@ web = ["uuid/wasm-bindgen"]
 [dependencies]
 uuid = { version = "1.5", features = ["serde", "v4"] }
 serde = { version = "1", features = ["derive"] }
+
+[target.'cfg(target_family = "wasm")'.dependencies]
+uuid ={ features = ["wasm-bindgen", "serde", "v4"]}
